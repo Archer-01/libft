@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:47:58 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/03 13:52:17 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/03 14:17:03 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		++s1;
 		++s2;
 	}
-	return (*s1 - *s2);
+	return ((unsigned char) *s1 - (unsigned char) *s2);
 }
