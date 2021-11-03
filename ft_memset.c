@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:41:55 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/01 18:05:28 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/03 11:16:49 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	i = -1;
 	while (++i < len)
-		*((unsigned char *) b++) = c;
+		((unsigned char *) b)[i] = c;
 	return (b);
 }
