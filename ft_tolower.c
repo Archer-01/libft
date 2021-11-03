@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:00:02 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/03 13:02:27 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/03 13:11:45 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,5 @@ int	ft_tolower(int c)
 {
 	if(ft_isupper(c))
 		return (c + ('a' - 'A'));
-	else
-		return (c);
+	return (c);
 }
