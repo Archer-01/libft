@@ -17,7 +17,7 @@ TEST	:= $(TESTDIR)/main.c
 OUTPUT	:= $(TESTDIR)/a.out
 
 # ********************************** Targets ***********************************
-all:	$(NAME)
+all:	$(NAME) test
 
 $(NAME):	$(OBJS)
 			$(AR) $(NAME) $(OBJS)
