@@ -6,13 +6,12 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 12:21:50 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/06 14:19:33 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/06 14:23:28 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdio.h>
 static unsigned int	ft_wc(char const *s, char c)
 {
 	unsigned int	wc;
