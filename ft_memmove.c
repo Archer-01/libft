@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 18:26:08 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/04 21:57:16 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/06 20:23:00 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ static void	*ft_memmove_overlap(void *dst, const void *src, size_t len)
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (src - dst < 0)
+	if (!len)
+		return (dst);
+	else if (src - dst < 0)
 		return (ft_memmove_overlap(dst, src, len));
 	else
 		return (ft_memcpy(dst, src, len));
