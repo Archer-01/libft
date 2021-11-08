@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:54:15 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/08 13:42:28 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/08 13:45:45 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ static size_t	ft_needle(const char *haystack, const char *needle, size_t len,
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	// size_t	needlelen;
-
-	// needlelen = ft_strlen(needle);
 	if (!(*needle))
 		return ((char *) haystack);
 	i = -1;
