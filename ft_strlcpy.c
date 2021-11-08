@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 09:44:38 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/05 20:34:34 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/08 11:57:53 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	srclen = ft_strlen(src);
 	if (dstsize)
 	{
-		while ((dstsize--) - 1)
+		while ((dstsize--) - 1 && *src)
 			*(dst++) = *(src++);
 		*dst = 0;
 	}
