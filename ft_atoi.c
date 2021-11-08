@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 15:09:33 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/04 15:56:37 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/08 15:27:47 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,23 @@ static int	ft_issign(char c)
 	return (c == '+' || c == '-');
 }
 
+static int	ft_check_long(unsigned long long num, int sign)
+{
+	unsigned long long	long_max;
+
+	long_max = 9223372036854775807;
+	if (num >= (long_max + 1) && sign == 1)
+		return (-1);
+	else if (num >= (long_max) && sign == -1)
+		return (0);
+	return (1);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	num;
-	int	sign;
+	unsigned long long	num;
+	int					sign;
+	int					long_check;
 
 	num = 0;
 	sign = 1;
@@ -41,6 +54,9 @@ int	ft_atoi(const char *str)
 	while (ft_isdigit(*(str)))
 	{
 		num = (num * 10) + (*str - '0');
+		long_check = ft_check_long(num, sign);
+		if (long_check != 1)
+			return (long_check);
 		++str;
 	}
 	return (sign * num);
