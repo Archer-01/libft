@@ -20,7 +20,7 @@ OUTPUT	:= $(TESTDIR)/a.out
 all:	$(NAME) test
 
 $(NAME):	$(OBJS)
-			$(AR) $(NAME) $(OBJS)
+			$(AR) $(NAME) $?
 
 .c.o:
 		$(CC) $(CFLAGS) -c -o $@ $<
