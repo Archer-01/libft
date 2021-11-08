@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:13:16 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/04 20:37:15 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/08 15:30:08 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	i;
 
 	ptr = malloc(count * size);
+	if (!ptr)
+		return (0);
 	i = 0;
 	while (i < count)
 	{

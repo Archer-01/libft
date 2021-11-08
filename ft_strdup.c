@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:28:30 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/04 17:39:14 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/08 15:30:30 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strdup(const char *s1)
 
 	s1_len = ft_strlen(s1) + 1;
 	s2 = (char *) malloc((s1_len) * sizeof(char));
+	if (!s2)
+		return (0);
 	ft_strlcpy(s2, s1, s1_len);
 	return (s2);
 }
