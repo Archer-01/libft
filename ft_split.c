@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 12:21:50 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/06 14:23:28 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/09 09:45:43 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,25 @@
 
 static unsigned int	ft_wc(char const *s, char c)
 {
+	unsigned int	start;
+	unsigned int	end;
 	unsigned int	wc;
+	unsigned int	i;
 
 	wc = 0;
-	while (*s)
-		if (*(s++) == c)
+	i = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+			++i;
+		start = i;
+		end = start;
+		while (s[end] != c && s[end])
+			++end;
+		if (start < end)
 			++wc;
-	if (*(s - 1) == c)
-		++wc;
+		i = end;
+	}
 	return (wc);
 }
 
@@ -45,16 +56,20 @@ char	**ft_split(char const *s, char c)
 	unsigned int	end;
 	unsigned int	i;
 
+	if (!s)
+		return (0);
 	wc = ft_wc(s, c);
 	words = (char **) malloc(sizeof(char *) * (wc + 1));
+	if (!words)
+		return (0);
 	start = 0;
-	end = 0;
-	i = 0;
-	while (wc--)
+	i = -1;
+	while (++i < wc)
 	{
-		words[i++] = ft_getword(s, c, start, &end);
-		if (s[end])
-			start = end + 1;
+		while (s[start] == c && s[start])
+			++start;
+		words[i] = ft_getword(s, c, start, &end);
+		start = end;
 	}
 	words[i] = 0;
 	return (words);
