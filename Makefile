@@ -6,9 +6,6 @@ CFLAGS	:= -Wall -Wextra -Werror
 RM	:= rm -f
 AR	:= ar rcs
 
-# ******************************** Directories *********************************
-TESTDIR	:= test
-
 # *********************************** Files ************************************
 NAME	:= libft.a
 SRCS	:=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
@@ -19,8 +16,6 @@ SRCS	:=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 OBJS	:= $(SRCS:.c=.o)
-TEST	:= $(TESTDIR)/main.c
-OUTPUT	:= $(TESTDIR)/a.out
 
 # *********************************** Bonus ************************************
 BONUS_SRCS	:=	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
@@ -40,10 +35,6 @@ $(NAME):	$(OBJS)
 bonus:	$(BONUS_OBJS)
 		$(AR) $(NAME) $?
 
-test: all bonus
-	@$(CC) $(CFLAGS) $(TEST) -L. -lft -o $(OUTPUT)
-	@./$(OUTPUT)
-
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS) $(OUTPUT)
 
@@ -52,4 +43,4 @@ fclean:	clean
 
 re:	fclean all
 
-.PHONY:	all clean fclean re test bonus
+.PHONY:	all clean fclean re bonus
