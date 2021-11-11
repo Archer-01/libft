@@ -36,7 +36,7 @@ bonus:	$(BONUS_OBJS)
 		$(AR) $(NAME) $?
 
 clean:
-	$(RM) $(OBJS) $(BONUS_OBJS) $(OUTPUT)
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean:	clean
 		$(RM) $(NAME)
