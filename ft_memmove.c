@@ -6,13 +6,11 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 18:26:08 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/06 20:23:00 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/12 00:37:12 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include <stdio.h>
 
 static void	*ft_memmove_overlap(void *dst, const void *src, size_t len)
 {
