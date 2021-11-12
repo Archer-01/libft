@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 12:21:50 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/12 02:20:12 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/12 03:20:03 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	**ft_split(char const *s, char c)
 		while (s[start] == c && s[start])
 			++start;
 		words[i] = ft_getword(s, c, start, &end);
-		if (ft_free(words[i], words, wc))
+		if (ft_free(words[i], words, i))
 			return (0);
 		start = end;
 	}
