@@ -27,7 +27,7 @@ BONUS_OBJS	:= $(BONUS_SRCS:.c=.o)
 # ********************************** Targets ***********************************
 all:	$(NAME)
 
-$(NAME):	$(OBJS)
+$(NAME):	$(OBJS) bonus
 			$(AR) $(NAME) $?
 
 %.o:	%.c $(HEADER)
