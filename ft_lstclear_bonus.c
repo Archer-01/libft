@@ -6,11 +6,11 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 21:02:59 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/10 12:03:03 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/12 02:26:49 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
