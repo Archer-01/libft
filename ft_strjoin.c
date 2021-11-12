@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 10:07:37 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/08 18:24:31 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/11/12 21:30:29 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s1_len;
 	size_t	s2_len;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (0);
+	if (!s1 && s2)
+		return (ft_strdup(s2));
+	else if (s1 && !s2)
+		return (ft_strdup(s1));
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	res = (char *) malloc(sizeof(char) * (s1_len + s2_len + 1));
