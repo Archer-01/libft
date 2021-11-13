@@ -16,7 +16,7 @@ SRCS	:=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 OBJS	:= $(SRCS:.c=.o)
-HEADER	:= libft.h
+HEADER	:= -I.
 
 # *********************************** Bonus ************************************
 BONUS_SRCS	:=	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
@@ -27,14 +27,14 @@ BONUS_OBJS	:= $(BONUS_SRCS:.c=.o)
 # ********************************** Targets ***********************************
 all:	$(NAME)
 
-$(NAME):	$(OBJS) bonus
+$(NAME):	$(OBJS)
 			$(AR) $(NAME) $?
 
-%.o:	%.c $(HEADER)
-		$(CC) $(CFLAGS) -c -o $@ $<
+%.o:	%.c
+		$(CC) $(CFLAGS) $(HEADER) -c -o $@ $<
 
-bonus:	$(BONUS_OBJS)
-		$(AR) $(NAME) $?
+bonus:	all $(BONUS_OBJS)
+		$(AR) $(NAME) $(BONUS_OBJS)
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)
