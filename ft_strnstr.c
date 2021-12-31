@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:54:15 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/12 01:28:50 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/31 13:22:45 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,14 @@ static size_t	ft_needle(const char *haystack, const char *needle, size_t len,
 	return (count);
 }
 
+/**
+ * @brief Searches for string inside another string
+ *
+ * @param haystack: string to be operated on
+ * @param needle: string to find
+ * @param len: number of bytes to search
+ * @return char*: memory address of needle found in haystack, NULL on failure
+ */
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;

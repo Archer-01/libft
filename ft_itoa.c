@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 09:53:19 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/09 13:12:07 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/31 12:10:48 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ static int	ft_digitcount(int n)
 	return (digitcount);
 }
 
+/**
+ * @brief Converts integer to string
+ *
+ * @param n: number to convert
+ * @return char*: newly created converted string
+ */
 char	*ft_itoa(int n)
 {
 	int		digitcount;

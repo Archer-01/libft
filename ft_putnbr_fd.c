@@ -6,12 +6,18 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:26:55 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/09 17:34:31 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/31 13:05:31 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Puts a number onto a file pointed by a file descriptor
+ *
+ * @param n: number to put
+ * @param fd: file descriptor
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n >= 0 && n <= 9)

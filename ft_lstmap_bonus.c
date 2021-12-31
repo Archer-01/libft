@@ -6,12 +6,20 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 12:16:37 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/12 02:51:28 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/31 12:54:56 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Maps new list by applying function to list nodes
+ *
+ * @param lst: list to be operated on
+ * @param f: function to be applied
+ * @param del: function to free memory in case of error
+ * @return t_list*: newly created list, NULL on failure
+ */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newlst;

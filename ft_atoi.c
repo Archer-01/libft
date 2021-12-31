@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 15:09:33 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/08 15:27:47 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/31 12:02:32 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@ static int	ft_check_long(unsigned long long num, int sign)
 	return (1);
 }
 
+/**
+ * @brief Converts the integer part of str to integer
+ *
+ * @param str: string to convert
+ * @return int: converted string, 0 if invalid
+ */
 int	ft_atoi(const char *str)
 {
 	unsigned long long	num;

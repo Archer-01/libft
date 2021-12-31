@@ -6,12 +6,20 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 21:01:36 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/12 02:32:11 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/31 13:23:00 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Gets a substring from a string
+ *
+ * @param s: string to be operated on
+ * @param start: start index
+ * @param len: offset
+ * @return char*: newly created substring, NULL on failure
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;

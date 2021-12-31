@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 12:21:50 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/12 03:20:03 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/31 13:22:11 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,13 @@ static int	ft_free(char *word, char **words, unsigned int wc)
 	return (1);
 }
 
+/**
+ * @brief Splits a string into an array of strings based on a separator
+ *
+ * @param s: string to be operated on
+ * @param c: character to split by
+ * @return char**: memory adress of array of splitted strings, NULL on failure
+ */
 char	**ft_split(char const *s, char c)
 {
 	char			**words;

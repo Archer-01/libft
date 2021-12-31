@@ -6,12 +6,19 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 13:23:33 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/09 13:39:11 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/31 13:21:31 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Maps a new string based of the specified one by applying a function
+ *
+ * @param s: string to be operated on
+ * @param f: function to apply on each character
+ * @return char*: newly created mapped string, NULL on failure
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*res;

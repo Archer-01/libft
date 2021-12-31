@@ -6,12 +6,20 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:13:12 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/08 11:12:56 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/31 12:59:19 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Compares two memory addresses content by offset
+ *
+ * @param s1: first memory address
+ * @param s2: second memory address
+ * @param n: number of bytes to compare
+ * @return int: 0 if equal, difference otherwise
+ */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	while (n--)

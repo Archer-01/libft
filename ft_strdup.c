@@ -6,12 +6,18 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:28:30 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/12 02:33:27 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/31 13:21:48 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Duplicates the string entered as a parameter
+ *
+ * @param str: string to duplicate
+ * @return char*: duplicated string, NULL on failure
+ */
 char	*ft_strdup(const char *s1)
 {
 	char	*s2;

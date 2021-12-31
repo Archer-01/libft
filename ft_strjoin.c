@@ -6,12 +6,19 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 10:07:37 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/12 21:30:29 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/31 13:21:40 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Joins two strings into a new one
+ *
+ * @param s1: first string
+ * @param s2: second string
+ * @return char*: newly created joined string, NULL on failure
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*res;

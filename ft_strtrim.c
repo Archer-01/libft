@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 11:29:36 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/08 18:26:41 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/31 13:19:55 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@ static int	ft_isset(char const c, char const *set)
 	return (0);
 }
 
+/**
+ * @brief Trims characters in set from string beginning and end
+ *
+ * @param s1: string to trim
+ * @param set: set of characters to be trimmed
+ * @return char*: newly created trimmed string
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	unsigned int	start;

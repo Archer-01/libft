@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 18:26:08 by hhamza            #+#    #+#             */
-/*   Updated: 2021/11/12 00:37:12 by hhamza           ###   ########.fr       */
+/*   Updated: 2021/12/31 13:02:10 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,14 @@ static void	*ft_memmove_overlap(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
+/**
+ * @brief Copies from memory address to another (supports overlap)
+ *
+ * @param dst: destination memory address
+ * @param src: source memory address
+ * @param len: number of bytes to be copied
+ * @return void*: destination memory address
+ */
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	if (!len)
