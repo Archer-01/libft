@@ -4,3 +4,4 @@ a.out
 **/.DS_Store
 *.dSYM
 obj
+.vscode
