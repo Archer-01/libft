@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:36:41 by hhamza            #+#    #+#             */
-/*   Updated: 2022/02/06 11:36:49 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/02/06 12:06:55 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,18 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 # define BUFFER_SIZE 42
+# define HEXA_LEN 16
+# define HEXA_UPPER "0123456789ABCDEF"
+# define HEXA_LOWER "0123456789abcdef"
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -54,11 +64,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
@@ -71,5 +76,14 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 char	*get_next_line(int fd);
+
+int		ft_putchar(char c);
+int		ft_putstr(const char *str);
+int		ft_putnbr(int nb);
+int		ft_putnbr_unsigned(unsigned int nb);
+int		ft_putnbr_hex(unsigned int nb, const char *base);
+int		ft_putaddr_hex(unsigned long nb, const char *base);
+int		ft_parse_conversion(char conversion, va_list *ap);
+int		ft_printf(const char *format, ...);
 
 #endif
