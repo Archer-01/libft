@@ -6,12 +6,18 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 10:14:58 by hhamza            #+#    #+#             */
-/*   Updated: 2022/02/06 11:58:59 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:41:50 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Print string to to standard output
+ *
+ * @param str: string to print
+ * @return int: Number of characters printed
+ */
 int	ft_putstr(const char *str)
 {
 	int	written;

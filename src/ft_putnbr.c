@@ -6,12 +6,18 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 14:37:19 by hhamza            #+#    #+#             */
-/*   Updated: 2022/02/06 11:58:55 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:51:17 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Print integer to string
+ *
+ * @param nb: integer to print
+ * @return int: Number of characters printed
+ */
 int	ft_putnbr(int nb)
 {
 	if (nb >= 0 && nb < 10)
