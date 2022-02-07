@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 13:24:02 by hhamza            #+#    #+#             */
-/*   Updated: 2022/02/06 11:52:41 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:08:22 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,12 @@ static char	*ft_save_remainder(char *line, char *remainder, ssize_t read_size)
 	return (line);
 }
 
+/**
+ * @brief Get the next line from a file
+ *
+ * @param fd: File descriptor
+ * @return char*: Retreived line, NULL otherwise
+ */
 char	*get_next_line(int fd)
 {
 	static char	remainder[10240][BUFFER_SIZE + 1];

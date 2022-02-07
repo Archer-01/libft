@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:36:41 by hhamza            #+#    #+#             */
-/*   Updated: 2022/02/06 12:06:55 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:14:15 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,6 @@ int		ft_putnbr(int nb);
 int		ft_putnbr_unsigned(unsigned int nb);
 int		ft_putnbr_hex(unsigned int nb, const char *base);
 int		ft_putaddr_hex(unsigned long nb, const char *base);
-int		ft_parse_conversion(char conversion, va_list *ap);
 int		ft_printf(const char *format, ...);
 
 #endif
