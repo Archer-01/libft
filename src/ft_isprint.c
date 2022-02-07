@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:23:08 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/31 12:09:57 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:32:20 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
  * @brief Checks if characted is printable
  *
  * @param c: character to check
- * @return int: 1 for printable, 0 for nonprintable
+ * @return t_bool: TRUE for printable, FALSE for non
  */
-int	ft_isprint(int c)
+t_bool	ft_isprint(int c)
 {
 	return (c >= ' ' && c <= '~');
 }

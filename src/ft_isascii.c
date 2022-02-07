@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:15:34 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/31 12:07:57 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:31:33 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
  * @brief Checks if a character is ascii
  *
  * @param c: character to check
- * @return int: 1 for ascii, 0 for nonascii
+ * @return t_bool: TRUE for ascii, FALSE for non
  */
-int	ft_isascii(int c)
+t_bool	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

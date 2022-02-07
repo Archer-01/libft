@@ -6,19 +6,19 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:09:05 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/31 12:06:27 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:31:03 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Checks if a character is alphanumeric
+ * @brief Check if a character is alphanumeric
  *
  * @param c: character to check
- * @return int: 1 for alphanumeric, 0 for nonalphanumeric
+ * @return t_bool: TRUE for alphanumeric, FALSE for non
  */
-int	ft_isalnum(int c)
+t_bool	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }

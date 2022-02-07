@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:36:41 by hhamza            #+#    #+#             */
-/*   Updated: 2022/02/07 11:14:15 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:30:00 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,17 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
+typedef enum e_bool
+{
+	FALSE = 0,
+	TRUE = 1
+}	t_bool;
+
+t_bool	ft_isalpha(int c);
+t_bool	ft_isdigit(int c);
+t_bool	ft_isalnum(int c);
+t_bool	ft_isascii(int c);
+t_bool	ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);

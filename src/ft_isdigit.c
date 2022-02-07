@@ -6,7 +6,7 @@
 /*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:57:08 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/31 12:08:46 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:29:07 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
  * @brief Checks if character is a digit
  *
  * @param c: character to check
- * @return int: 1 for digit, 0 for nondigit
+ * @return t_bool: TRUE for digit, false for non
  */
-int	ft_isdigit(int c)
+t_bool	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
