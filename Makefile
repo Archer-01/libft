@@ -1,6 +1,6 @@
 # ****************************** Compiler Options ******************************
 CC		:= cc
-CFLAGS	:= -Wall -Wextra -Werror
+CFLAGS	:= -Wall -Wextra -Werror -g
 
 # ******************************* Other commands *******************************
 RM		:= rm -rf
@@ -18,6 +18,15 @@ NAME	:=	libft.a
 SRCS	:=	ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
+			ft_doublelst_addback.c \
+			ft_doublelst_addfront.c \
+			ft_doublelst_clear.c \
+			ft_doublelst_delone.c \
+			ft_doublelst_iter.c \
+			ft_doublelst_last.c \
+			ft_doublelst_map.c \
+			ft_doublelst_new.c \
+			ft_doublelst_size.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
