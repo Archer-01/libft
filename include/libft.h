@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:36:41 by hhamza            #+#    #+#             */
-/*   Updated: 2022/02/09 10:45:25 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/02/17 14:07:16 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,5 +110,7 @@ void			ft_doublelst_clear(t_double_list **lst, void (*del)(void *));
 void			ft_doublelst_iter(t_double_list *lst, void (*f)(void *));
 t_double_list	*ft_doublelst_map(t_double_list *lst, void *(*f)(void *), \
 	void (*del)(void *));
+
+int				ft_strcmp(const char *s1, const char *s2);
 
 #endif
