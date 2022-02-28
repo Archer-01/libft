@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 13:24:02 by hhamza            #+#    #+#             */
-/*   Updated: 2022/02/07 11:08:22 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/02/28 16:13:48 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ char	*get_next_line(int fd)
 	if (fd < 0 || fd >= 10240)
 		return (NULL);
 	line = ft_strdup(remainder[fd]);
+	if (line == NULL)
+		return (NULL);
 	while (ft_indexof(line, '\n') == -1)
 	{
 		read_size = read(fd, buffer, BUFFER_SIZE);
@@ -79,6 +81,8 @@ char	*get_next_line(int fd)
 		buffer[read_size] = '\0';
 		temp = line;
 		line = ft_strjoin(line, buffer);
+		if (line == NULL)
+			return (NULL);
 		free(temp);
 	}
 	line = ft_save_remainder(line, remainder[fd], read_size);
