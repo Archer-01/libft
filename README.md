@@ -1,6 +1,6 @@
 # Libft
 
-*C Library for regrouping usual functions to be used on various projects*
+*C Library of usual functions to be used on various projects*
 
 ## Libft functions
 
