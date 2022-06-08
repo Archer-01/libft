@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:41:55 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/31 13:03:36 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/06/08 06:40:38 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,22 @@
 /**
  * @brief Sets len bytes on memory adress to the given value
  *
- * @param b: memory address to operate on
- * @param c: character to be set on memory
+ * @param addr: memory address to operate on
+ * @param val: character to be set on memory
  * @param len: number of bytes to set
- * @return void*: memory address of b
+ * @return void*: operated on memory address
  */
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *addr, int val, size_t len)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*uchar_ptr;
 
-	i = -1;
-	while (++i < len)
-		((unsigned char *) b)[i] = (unsigned char) c;
-	return (b);
+	uchar_ptr = (unsigned char *) addr;
+	i = 0;
+	while (i < len)
+	{
+		uchar_ptr[i] = (unsigned char) val;
+		++i;
+	}
+	return (addr);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 18:26:08 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/31 13:02:10 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/06/08 09:36:50 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,18 @@
 static void	*ft_memmove_overlap(void *dst, const void *src, size_t len)
 {
 	size_t	i;
+	char	*char_dst;
+	char	*char_src;
 
-	i = len;
-	while (--i > 0)
-		((char *) dst)[i] = ((char *) src)[i];
-	((char *) dst)[i] = ((char *) src)[i];
+	char_src = (char *) src;
+	char_dst = (char *) dst;
+	i = len - 1;
+	while (i > 0)
+	{
+		char_dst[i] = char_src[i];
+		--i;
+	}
+	char_dst[i] = char_src[i];
 	return (dst);
 }
 
@@ -33,10 +40,16 @@ static void	*ft_memmove_overlap(void *dst, const void *src, size_t len)
  */
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (!len)
+	if (len == 0)
+	{
 		return (dst);
+	}
 	else if (src - dst < 0)
+	{
 		return (ft_memmove_overlap(dst, src, len));
+	}
 	else
+	{
 		return (ft_memcpy(dst, src, len));
+	}
 }
