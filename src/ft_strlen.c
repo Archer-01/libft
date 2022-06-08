@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:29:28 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/31 13:12:05 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/06/08 06:36:40 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,14 @@
  * @param str: string to be operated on
  * @return size_t: length of the string
  */
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen(const char *str)
 {
 	size_t	len;
 
 	len = 0;
-	while (*(s++))
+	while (str[len] != '\0')
+	{
 		++len;
+	}
 	return (len);
 }
