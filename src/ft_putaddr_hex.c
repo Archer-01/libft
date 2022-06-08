@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putaddr_hex.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 10:37:42 by hhamza            #+#    #+#             */
-/*   Updated: 2022/02/07 11:55:15 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/06/08 06:44:23 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  */
 int	ft_putaddr_hex(unsigned long nb, const char *base)
 {
-	if (nb >= 0 && nb < HEXA_LEN)
+	if (nb < HEXA_LEN)
 		return (ft_putchar(base[nb]));
 	else
 		return (ft_putaddr_hex(nb / 16, base) + ft_putaddr_hex(nb % 16, base));

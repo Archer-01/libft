@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 16:02:22 by hhamza            #+#    #+#             */
-/*   Updated: 2022/02/07 11:54:39 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/06/08 06:44:34 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
  */
 int	ft_putnbr_hex(unsigned int nb, const char *base)
 {
-	if (nb >= 0 && nb < HEXA_LEN)
+	if (nb < HEXA_LEN)
 		return (ft_putchar(base[nb]));
 	else
 		return (ft_putnbr_hex(nb / HEXA_LEN, base) \
