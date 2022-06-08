@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:52:08 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/31 13:25:57 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/06/08 09:48:28 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ static int	ft_islower(int c)
 int	ft_toupper(int c)
 {
 	if (ft_islower(c))
+	{
 		return (c - ('a' - 'A'));
-	return (c);
+	}
+	else
+	{
+		return (c);
+	}
 }
