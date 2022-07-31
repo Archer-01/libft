@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putaddr_hex_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 17:22:48 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/31 07:42:26 by hhamza           ###   ########.fr       */
+/*   Created: 2021/12/22 10:37:42 by hhamza            #+#    #+#             */
+/*   Updated: 2022/07/31 07:42:03 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Puts string followed by a newline to file pointed by file descriptor
+ * @brief Print address to file descriptor in hexadecimal format.
  *
- * @param s: string to put
- * @param fd: file descriptor
+ * @param fd: File descriptor to write onto
+ * @param nb: Address to print
+ * @param base: lowercase/uppercase hexadecimal base
  * @return int: Number of characters written to fd
  */
-int	ft_putendl_fd(char *s, int fd)
+int	ft_putaddr_hex_fd(unsigned long nb, const char *base, int fd)
 {
-	if (!s)
-		return (0);
-	return (ft_putstr_fd(s, fd) + ft_putchar_fd('\n', fd));
+	if (nb < HEXA_LEN)
+		return (ft_putchar_fd(base[nb], fd));
+	else
+		return (ft_putaddr_hex_fd(nb / 16, base, fd) + \
+			ft_putaddr_hex_fd(nb % 16, base, fd));
 }

@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:36:41 by hhamza            #+#    #+#             */
-/*   Updated: 2022/02/17 14:07:16 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/31 07:38:48 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,10 +74,10 @@ char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
-void			ft_putchar_fd(char c, int fd);
-void			ft_putstr_fd(char *s, int fd);
-void			ft_putendl_fd(char *s, int fd);
-void			ft_putnbr_fd(int n, int fd);
+int				ft_putchar_fd(char c, int fd);
+int				ft_putstr_fd(char *s, int fd);
+int				ft_putendl_fd(char *s, int fd);
+int				ft_putnbr_fd(int n, int fd);
 
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
@@ -99,6 +99,10 @@ int				ft_putnbr_unsigned(unsigned int nb);
 int				ft_putnbr_hex(unsigned int nb, const char *base);
 int				ft_putaddr_hex(unsigned long nb, const char *base);
 int				ft_printf(const char *format, ...);
+int				ft_putaddr_hex_fd(unsigned long nb, const char *base, int fd);
+int				ft_putnbr_unsigned_fd(unsigned int nb, int fd);
+int				ft_putnbr_hex_fd(unsigned int nb, const char *base, int fd);
+int				ft_fprintf(int fd, const char *format, ...);
 
 t_double_list	*ft_doublelst_new(void *content);
 void			ft_doublelst_addfront(t_double_list **lst, t_double_list *new);

@@ -33,6 +33,7 @@ SRCS	:=	ft_atoi.c \
 			ft_doublelst_map.c \
 			ft_doublelst_new.c \
 			ft_doublelst_size.c \
+			ft_fprintf.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
@@ -55,13 +56,16 @@ SRCS	:=	ft_atoi.c \
 			ft_memset.c \
 			ft_printf.c \
 			ft_putaddr_hex.c \
+			ft_putaddr_hex_fd.c \
 			ft_putchar.c \
 			ft_putchar_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr.c \
 			ft_putnbr_fd.c \
 			ft_putnbr_hex.c \
+			ft_putnbr_hex_fd.c \
 			ft_putnbr_unsigned.c \
+			ft_putnbr_unsigned_fd.c \
 			ft_putstr.c \
 			ft_putstr_fd.c \
 			ft_split.c \

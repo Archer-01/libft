@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_unsigned_fd.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 17:22:48 by hhamza            #+#    #+#             */
-/*   Updated: 2022/07/31 07:42:26 by hhamza           ###   ########.fr       */
+/*   Created: 2021/12/22 14:53:34 by hhamza            #+#    #+#             */
+/*   Updated: 2022/07/31 07:43:16 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Puts string followed by a newline to file pointed by file descriptor
+ * @brief Print unsigned integer to file descriptor.
  *
- * @param s: string to put
- * @param fd: file descriptor
- * @return int: Number of characters written to fd
+ * @param fd: File descriptor to write onto
+ * @param nb: Unsigned integer to print
+ * @return int: Number of characters written
  */
-int	ft_putendl_fd(char *s, int fd)
+int	ft_putnbr_unsigned_fd(unsigned int nb, int fd)
 {
-	if (!s)
-		return (0);
-	return (ft_putstr_fd(s, fd) + ft_putchar_fd('\n', fd));
+	if (nb < 10)
+		return (ft_putchar_fd(nb + '0', fd));
+	else
+		return (ft_putnbr_unsigned_fd(nb / 10, fd) + \
+			ft_putnbr_unsigned_fd(nb % 10, fd));
 }

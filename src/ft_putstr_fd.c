@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hhamza <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:14:57 by hhamza            #+#    #+#             */
-/*   Updated: 2021/12/31 13:06:02 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/07/31 07:43:27 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,18 @@
  *
  * @param s: string to put
  * @param fd: file descriptor
+ * @return int: Number of characters written to fd
  */
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
+	int	ret;
+
 	if (!s)
-		return ;
+		return (0);
+	ret = 0;
 	while (*s)
-		ft_putchar_fd(*(s++), fd);
+	{
+		ret += ft_putchar_fd(*(s++), fd);
+	}
+	return (ret);
 }
