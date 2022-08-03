@@ -42,6 +42,6 @@ char	*ft_append_str(char *s1, char const *s2)
 	{
 		return (NULL);
 	}
-	ft_strlcat(s1, s2, len2 + 1);
+	ft_strlcat(s1 + len1, s2, len2 + 1);
 	return (s1);
 }
