@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 18:58:05 by hhamza            #+#    #+#             */
-/*   Updated: 2022/08/03 19:05:45 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/08/03 20:11:41 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	*ft_realloc(void *ptr, size_t size)
 	}
 	tmp = ptr;
 	ptr = ft_calloc(1, size);
-	if (ptr = NULL)
+	if (ptr == NULL)
 	{
 		free(tmp);
 		return (NULL);
