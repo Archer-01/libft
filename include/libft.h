@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:36:41 by hhamza            #+#    #+#             */
-/*   Updated: 2022/08/03 18:57:45 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/08/03 19:08:05 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ int				ft_atoi(const char *str);
 void			*ft_calloc(size_t count, size_t size);
 void			*ft_realloc(void *ptr, size_t size);
 char			*ft_strdup(const char *s1);
+char			*ft_append_char(char *str, char c);
 
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
