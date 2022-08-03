@@ -21,7 +21,9 @@ BLUE	:= '\033[0;34m'
 
 # *********************************** Files ************************************
 NAME	:=	libft.a
-SRCS	:=	ft_atoi.c \
+SRCS	:=	ft_append_char.c \
+			ft_append_str.c \
+			ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
 			ft_doublelst_addback.c \
@@ -68,6 +70,7 @@ SRCS	:=	ft_atoi.c \
 			ft_putnbr_unsigned_fd.c \
 			ft_putstr.c \
 			ft_putstr_fd.c \
+			ft_realloc.c \
 			ft_split.c \
 			ft_strchr.c \
 			ft_strcmp.c \
