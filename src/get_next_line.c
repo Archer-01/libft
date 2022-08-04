@@ -6,7 +6,7 @@
 /*   By: hhamza <hhamza@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 13:24:02 by hhamza            #+#    #+#             */
-/*   Updated: 2022/02/28 16:13:48 by hhamza           ###   ########.fr       */
+/*   Updated: 2022/08/04 09:50:43 by hhamza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,27 @@ static char	*ft_save_remainder(char *line, char *remainder, ssize_t read_size)
 	return (line);
 }
 
+static t_bool	get_next_line_helper(ssize_t *read_size, int fd, char *buffer, \
+	char **line)
+{
+	char	*temp;
+
+	*read_size = read(fd, buffer, BUFFER_SIZE);
+	if (*read_size <= 0)
+	{
+		return (FALSE);
+	}
+	buffer[*read_size] = '\0';
+	temp = *line;
+	*line = ft_strjoin(*line, buffer);
+	free(temp);
+	if (*line == NULL)
+	{
+		return (FALSE);
+	}
+	return (TRUE);
+}
+
 /**
  * @brief Get the next line from a file
  *
@@ -65,9 +86,9 @@ char	*get_next_line(int fd)
 	static char	remainder[10240][BUFFER_SIZE + 1];
 	char		buffer[BUFFER_SIZE + 1];
 	char		*line;
-	char		*temp;
 	ssize_t		read_size;
 
+	read_size = 0;
 	if (fd < 0 || fd >= 10240)
 		return (NULL);
 	line = ft_strdup(remainder[fd]);
@@ -75,15 +96,10 @@ char	*get_next_line(int fd)
 		return (NULL);
 	while (ft_indexof(line, '\n') == -1)
 	{
-		read_size = read(fd, buffer, BUFFER_SIZE);
-		if (read_size <= 0)
+		if (get_next_line_helper(&read_size, fd, buffer, &line) == FALSE)
+		{
 			break ;
-		buffer[read_size] = '\0';
-		temp = line;
-		line = ft_strjoin(line, buffer);
-		if (line == NULL)
-			return (NULL);
-		free(temp);
+		}
 	}
 	line = ft_save_remainder(line, remainder[fd], read_size);
 	return (line);
