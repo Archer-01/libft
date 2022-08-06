@@ -23,6 +23,7 @@ BLUE	:= '\033[0;34m'
 NAME	:=	libft.a
 SRCS	:=	ft_append_char.c \
 			ft_append_str.c \
+			ft_atof.c \
 			ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
