@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+static void	no_free(void *ptr)
+{
+	(void)ptr;
+}
+
 /**
  * @brief Clears the list and frees all allocated memory
  *
@@ -25,7 +30,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	if (!lst)
 		return ;
 	if (!del)
-		del = free;
+		del = &no_free;
 	while (*lst)
 	{
 		tmp = *lst;
