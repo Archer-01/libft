@@ -89,7 +89,8 @@ SRCS	:=	ft_append_char.c \
 			ft_substr.c \
 			ft_tolower.c \
 			ft_toupper.c \
-			get_next_line.c
+			get_next_line.c \
+			ft_lstsort.c
 OBJS	:=	$(SRCS:.c=.o)
 HEADER	:=	libft.h
 

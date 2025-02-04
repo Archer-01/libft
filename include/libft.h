@@ -93,6 +93,7 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), \
 	void (*del)(void *));
+void			ft_lstsort(t_list **lst, int (*cmp)(void*, void*));
 
 char			*get_next_line(int fd);
 
